@@ -8,6 +8,6 @@ For Pocketmine Server
 
 My Discord|Whatsapp Group
 ----------|-------------
-[![Discord](https://github.com/JPoisonLegacy/hub-settings/blob/master/images/discord.jpg)](https://discord.gg/ReG8Z57)|[![Whatsapp]()](https://chat.whatsapp.com/E68oaaDgUGJ0lzy9vHE01I)
+[![Discord](https://github.com/JPoisonLegacy/hub-settings/blob/master/images/discord.jpg)](https://discord.gg/ReG8Z57)|[![Whatsapp](https://github.com/JPoisonLegacy/hub-settings/blob/master/images/whatsapp.jpg)](https://chat.whatsapp.com/E68oaaDgUGJ0lzy9vHE01I)
 
 Pls join the both discord server and whatsapp group....
