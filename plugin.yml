@@ -1,5 +1,5 @@
 name: HubSettings
-main: jpoisonlegacy\hub-settings\hub
+main: jpoisonlegacy\hubsettings\hub
 author: JPoisonLegacy
 version: 0.0.1
 api: [3.0.0]
