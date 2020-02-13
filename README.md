@@ -1,6 +1,6 @@
 # Hub-Operator
 
-Created and modify by JPoisonLegacy
+Created and modify by [!(images/jpoisonlegacy)]JPoisonLegacy[!(images/jpoisonlegacy)]
 
 For Pocketmine Server
 
