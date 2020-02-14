@@ -1,5 +1,11 @@
 <?php
 
+/**This is my very first plugin, so it has many error. I don't know how to gix the error.
+  *help me pls cuz I just want own a plugin that made by me
+  *I hope I successfully made this plugin
+  *huh
+*/
+
 namespace jpoisonlegacy\hubsettings
 
 use pocketmine\plugin\PluginBase;
