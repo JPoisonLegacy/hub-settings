@@ -1,6 +1,6 @@
 <?php
 
-namespace jpoisonlegacy\hub-settings
+namespace jpoisonlegacy\hubsettings
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\player\PlayerInteractEvent;
 use pocketmine\command\CommandSender;
