@@ -7,8 +7,19 @@
 */
 
 namespace jpoisonlegacy\hubsettings
-
+use pocketmine\level\sound\PopSound;
+use pocketmine\Server;
+use pocketmine\entity\Villager;
+use pocketmine\event\inventory\InventoryCloseEvent;
+use pocketmine\event\inventory\InventoryPickupItemEvent;
+use pocketmine\event\inventory\InventoryTransactionEvent;
+use pocketmine\event\player\PlayerItemHeldEvent;
+use pocketmine\inventory\ChestInventory;
+use pocketmine\entity\Entity;
 use pocketmine\plugin\PluginBase;
+use pocketmine\event\Listener;
+use pocketmine\tile\Chest;
+use pocketmine\level\format\FullChunk;
 use pocketmine\event\player\PlayerInteractEvent;
 use pocketmine\command\CommandSender;
 use pocketmine\command\Command;
