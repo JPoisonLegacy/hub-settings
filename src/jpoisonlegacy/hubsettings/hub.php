@@ -1,12 +1,14 @@
 <?php
 
 namespace jpoisonlegacy\hubsettings
+
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\player\PlayerInteractEvent;
 use pocketmine\command\CommandSender;
 use pocketmine\command\Command;
 use pocketmine\item\Item;
 use pocketmine\command\CommandExecutor;
+use onebone\economyapi\EconomyAPI;
 
 
 class hub extends PluginBase implements Listener {
@@ -19,9 +21,8 @@ class hub extends PluginBase implements Listener {
   public function onInteract(PlayerInteractEvent $event){
     $player = $event->getPlayer();
     $item = $event->getItem();
-    $tile = $player->getLevel()->getTile($item);
     
-    if($tile instanceof Compass){
+    if($item instanceof Compass){
         $api = Server::getInstance()->getPluginManager()->getPlugin("FormAPI");
         if ($api === null || $api->isDisabled()) {
             return;
