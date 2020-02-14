@@ -6,7 +6,7 @@
   *huh
 */
 
-namespace jpoisonlegacy\hubsettings
+namespace jpoisonlegacy\hubsettings;
 use pocketmine\level\sound\PopSound;
 use pocketmine\Server;
 use pocketmine\entity\Villager;
@@ -20,21 +20,48 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
 use pocketmine\tile\Chest;
 use pocketmine\level\format\FullChunk;
+
+use pocketmine\permission\Permission;
+use pocketmine\nbt\NBT;
+use pocketmine\nbt\tag\ByteTag;
+use pocketmine\nbt\tag\CompoundTag;
+use pocketmine\nbt\tag\DoubleTag;
+use pocketmine\nbt\tag\FloatTag;
+use pocketmine\nbt\tag\IntTag;
+use pocketmine\nbt\tag\ListTag;
+use pocketmine\nbt\tag\ShortTag;
+use pocketmine\nbt\tag\StringTag;
+use pocketmine\block\Air;
+
 use pocketmine\event\player\PlayerInteractEvent;
+use pocketmine\event\player\PlayerLoginEvent;
 use pocketmine\command\CommandSender;
 use pocketmine\command\Command;
+use pocketmine\utils\TextFormat as TE;
+use pocketmine\utils\Config;
+use pocketmine\event\entity\EntityLevelChangeEvent;
+use pocketmine\level\Position;
+use pocketmine\Player;
+use pocketmine\tile\Sign;
+use pocketmine\level\Level;
 use pocketmine\item\Item;
-use pocketmine\command\CommandExecutor;
+use pocketmine\event\block\BlockBreakEvent;
+use pocketmine\event\block\BlockPlaceEvent;
+use pocketmine\event\player\PlayerMoveEvent;
+use pocketmine\event\player\PlayerDeathEvent;
+use pocketmine\event\entity\EntityDamageEvent;
+use pocketmine\event\entity\EntityDamageByEntityEvent;
 use onebone\economyapi\EconomyAPI;
+use pocketmine\event\player\PlayerQuitEvent;
+use murder\murder\ResetMap;
+use pocketmine\math\Vector3;
+use pocketmine\block\Block;
 
 
 class hub extends PluginBase implements Listener {
 
-  public function onEnable()
-  {
-    $this->getLogger()->info("Hub-Plugin-for-DreamWorld-ENABLED")
-  }
-  
+	public function onEnable()
+	{
   public function onInteract(PlayerInteractEvent $event){
     $player = $event->getPlayer();
     $item = $event->getItem();
